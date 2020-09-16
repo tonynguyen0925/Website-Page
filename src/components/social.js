@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import config from "../config/"
-import Icon from "./icons"
 
 const { socialMedia } = config
 
@@ -82,6 +81,7 @@ const StyledSocialProfile = styled.a`
   font-size: ${({ fontSize }) => (fontSize ? fontSize : "1rem")};
   font-weight: 500;
   color: ${({ theme }) => theme.colors.primary};
+  text-align: center;
   &:hover {
     background-position: left bottom;
     color: #ffffff;
@@ -98,7 +98,7 @@ const StyledSocialProfile = styled.a`
   }
 `
 
-const Social = ({ width, padding, fontSize, fontWeight, withIcon }) => (
+const Social = ({ width, padding, fontSize, fontWeight }) => (
   <StyledSocialWrapper itemCount={socialMedia.length}>
     {socialMedia.map(({ name, url }, key) => {
       return (
@@ -113,7 +113,7 @@ const Social = ({ width, padding, fontSize, fontWeight, withIcon }) => (
           fontSize={fontSize}
           fontWeight={fontWeight}
         >
-          {withIcon ? <Icon name={name} /> : null} {name}
+          {name}
         </StyledSocialProfile>
       )
     })}
@@ -125,7 +125,6 @@ Social.propTypes = {
   padding: PropTypes.string,
   fontSize: PropTypes.string,
   fontWeight: PropTypes.string,
-  withIcon: PropTypes.bool,
 }
 
 export default Social
