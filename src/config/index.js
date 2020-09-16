@@ -23,7 +23,7 @@ module.exports = {
         },
         {
             name: "Resume",
-            url: "./NGUYEN_TONY_RESUME_CS_V4.1.pdf"
+            url: "https://1drv.ms/b/s!AiOenxD7Oz7IgoMqmstKKZysP9414A"
         },
         {
             name: "Email",
