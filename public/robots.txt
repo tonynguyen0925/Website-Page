@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://tonynguyen.app/sitemap.xml
+Host: https://tonynguyen.app
